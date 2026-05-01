@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="banking.controller.RegisterController"
+      alignment="CENTER" 
+      spacing="15" 
+      prefWidth="420" 
+      prefHeight="380">
+
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40"/>
+    </padding>
+
+    <Label text="Create New Account" 
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="regUsernameField" promptText="Choose Username" prefWidth="280"/>
+    <PasswordField fx:id="regPasswordField" promptText="Choose Password" prefWidth="280"/>
+    <PasswordField fx:id="regConfirmPasswordField" promptText="Confirm Password" prefWidth="280"/>
+
+    <Button fx:id="registerBtn" text="Register" 
+            onAction="#handleRegister" 
+            prefWidth="180" style="-fx-font-size: 14px;"/>
+
+    <Button fx:id="backToLoginBtn" text="Back to Login" 
+            onAction="#handleBackToLogin" 
+            prefWidth="180" 
+            style="-fx-font-size: 14px; -fx-background-color: #9E9E9E; -fx-text-fill: white;"/>
+
+    <Label fx:id="statusLabel" text="" style="-fx-text-fill: red; -fx-font-size: 13px;"/>
+</VBox>
